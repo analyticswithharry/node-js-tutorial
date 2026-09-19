@@ -1,0 +1,192 @@
+/* Use border-box sizing and remove browser default spacing. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the quiz on a light, full-height background. */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* Keep the quiz readable while limiting its maximum width. */
+.quiz-container {
+  width: 100%;
+  max-width: 650px;
+}
+
+/* Center the title and subtitle above the quiz card. */
+.quiz-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Style the main quiz heading. */
+.quiz-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+/* Use muted text for the supporting description. */
+.quiz-header p {
+  color: #666;
+}
+
+/* White card that contains the interactive quiz. */
+.quiz-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Place question progress and score at opposite sides of the card. */
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+
+  color: #666;
+  font-size: 14px;
+
+  margin-bottom: 25px;
+}
+
+/* Make the question easy to read across multiple lines. */
+.quiz-card h2 {
+  font-size: 22px;
+  line-height: 1.4;
+
+  margin-bottom: 25px;
+}
+
+/* Stack answer choices with consistent spacing. */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Shared appearance for dynamically created answer buttons. */
+.option {
+  width: 100%;
+
+  padding: 15px;
+
+  background: white;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  text-align: left;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* Give answer buttons visual feedback on hover. */
+.option:hover {
+  background: #f0f0f0;
+}
+
+/* Preserve styling for any selected answer state. */
+.option.selected {
+  border-color: #333;
+  background: #eaeaea;
+}
+
+/* Align feedback text and the Next button in the footer. */
+.quiz-footer {
+  margin-top: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Emphasize answer feedback. */
+#feedback {
+  font-weight: bold;
+}
+
+/* Green feedback and border for correct answers. */
+.correct-text {
+  color: #16803c;
+}
+
+/* Red feedback and border for incorrect answers. */
+.incorrect-text {
+  color: #c62828;
+}
+
+/* Prevent disabled answer buttons from looking clickable. */
+.option:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+/* Highlight the correct answer after a selection. */
+.option.correct {
+  border-color: #16803c;
+  background: #e6f6ec;
+}
+
+/* Highlight an incorrectly selected answer. */
+.option.incorrect {
+  border-color: #c62828;
+  background: #ffebeb;
+}
+
+/* Style the navigation button. */
+#next-button {
+  padding: 12px 25px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #222;
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+/* Darken the navigation button on hover. */
+#next-button:hover {
+  background: #444;
+}
+
+/* Show that Next is unavailable until an answer is selected. */
+#next-button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Reduce spacing and heading size on smaller screens. */
+@media (max-width: 500px) {
+  .quiz-card {
+    padding: 20px;
+  }
+
+  .quiz-card h2 {
+    font-size: 19px;
+  }
+
+  .quiz-header h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Document metadata and the quiz stylesheet. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Node.js MCQ Quiz</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main page container for the quiz application. -->
+    <main class="quiz-container">
+      <!-- Quiz title and short description. -->
+      <header class="quiz-header">
+        <h1>Node.js Quiz</h1>
+        <p>Test your Node.js knowledge</p>
+      </header>
+
+      <!-- Card containing progress, question, answers, and feedback. -->
+      <section class="quiz-card">
+        <!-- Progress and score are updated by public/app.js. -->
+        <div class="quiz-info">
+          <span id="question-number">Loading question...</span>
+          <span id="score">Score: 0</span>
+        </div>
+
+        <!-- The current question is inserted here after the API responds. -->
+        <h2 id="question">Loading quiz...</h2>
+
+        <!-- Answer buttons are generated dynamically from the question data. -->
+        <div id="options" class="options"></div>
+
+        <!-- Feedback and navigation controls. -->
+        <div class="quiz-footer">
+          <p id="feedback"></p>
+
+          <button id="next-button" disabled>Next</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Load the browser quiz logic after the page elements exist. -->
+    <script src="app.js"></script>
+  </body>
+</html>

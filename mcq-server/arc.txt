@@ -1,0 +1,7 @@
+mcq-app/
+├── server.js
+├── questions.json
+└── public/
+    ├── index.html
+    ├── style.css
+    └── app.js

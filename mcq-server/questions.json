@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "question": "What does Node.js use to execute JavaScript?",
+    "options": ["V8 Engine", "JVM", "Python", "PHP"],
+    "answer": "V8 Engine"
+  },
+  {
+    "id": 2,
+    "question": "Which module is used to create a web server in Node.js?",
+    "options": ["fs", "http", "path", "os"],
+    "answer": "http"
+  },
+  {
+    "id": 3,
+    "question": "Which method is used to read a file synchronously?",
+    "options": ["readFile()", "readFileSync()", "getFile()", "openFile()"],
+    "answer": "readFileSync()"
+  },
+  {
+    "id": 4,
+    "question": "Which keyword imports a CommonJS module?",
+    "options": ["import", "include", "require", "load"],
+    "answer": "require"
+  },
+  {
+    "id": 8,
+    "question": "Which code creates a basic HTTP server in Node.js?",
+    "options": [
+      "http.createServer()",
+      "http.createWeb()",
+      "server.createHTTP()",
+      "node.server()"
+    ],
+    "answer": "http.createServer()"
+  },
+  {
+    "id": 9,
+    "question": "In a Node.js HTTP server, what does req represent?",
+    "options": [
+      "The request from the client",
+      "The response sent to the client",
+      "The server port",
+      "The route handler"
+    ],
+    "answer": "The request from the client"
+  },
+  {
+    "id": 10,
+    "question": "Which HTTP method is normally used to retrieve data?",
+    "options": ["GET", "POST", "PUT", "DELETE"],
+    "answer": "GET"
+  },
+  {
+    "id": 11,
+    "question": "Which HTTP status code means that a request was successful?",
+    "options": ["200", "301", "404", "500"],
+    "answer": "200"
+  },
+  {
+    "id": 12,
+    "question": "What do HTTP headers provide?",
+    "options": [
+      "Metadata about the request or response",
+      "The JavaScript runtime",
+      "The database password only",
+      "The server's source code"
+    ],
+    "answer": "Metadata about the request or response"
+  },
+  {
+    "id": 13,
+    "question": "What is routing used for in a web server?",
+    "options": [
+      "Mapping URLs and methods to handlers",
+      "Encrypting all files",
+      "Installing Node.js",
+      "Compressing JavaScript variables"
+    ],
+    "answer": "Mapping URLs and methods to handlers"
+  },
+  {
+    "id": 14,
+    "question": "Which method converts a JavaScript value into a JSON string?",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "JSON.convert()",
+      "JSON.encode()"
+    ],
+    "answer": "JSON.stringify()"
+  },
+  {
+    "id": 15,
+    "question": "What is a callback in Node.js?",
+    "options": [
+      "A function passed to another function to run later",
+      "A special type of database",
+      "A built-in HTTP status code",
+      "A command that stops the server"
+    ],
+    "answer": "A function passed to another function to run later"
+  },
+  {
+    "id": 16,
+    "question": "What does a Promise represent in JavaScript?",
+    "options": [
+      "The eventual result of an asynchronous operation",
+      "A synchronous loop",
+      "A Node.js module",
+      "A file extension"
+    ],
+    "answer": "The eventual result of an asynchronous operation"
+  },
+  {
+    "id": 17,
+    "question": "Which keyword pauses an async function until a Promise settles?",
+    "options": ["await", "pause", "defer", "yieldAsync"],
+    "answer": "await"
+  },
+  {
+    "id": 18,
+    "question": "Which structure is commonly used to handle errors from awaited Promises?",
+    "options": ["try...catch", "if...else only", "switch...case", "for...of"],
+    "answer": "try...catch"
+  },
+  {
+    "id": 19,
+    "question": "Which pair of Node.js methods can read and write files asynchronously?",
+    "options": [
+      "fs.readFile() and fs.writeFile()",
+      "fs.readFileSync() and fs.writeFileSync()",
+      "fs.getFile() and fs.putFile()",
+      "fs.openSync() and fs.closeSync()"
+    ],
+    "answer": "fs.readFile() and fs.writeFile()"
+  }
+]
