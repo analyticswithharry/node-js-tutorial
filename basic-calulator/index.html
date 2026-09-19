@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Basic document metadata and the calculator stylesheet. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main calculator shell. -->
+    <main class="calculator" aria-label="Calculator">
+      <!-- Small header used for the calculator title and status indicator. -->
+      <header class="calculator-header">
+        <span class="eyebrow">Calculator</span>
+        <span class="status-dot" aria-hidden="true"></span>
+      </header>
+
+      <!-- The expression and current answer are updated by app.js. -->
+      <section class="display" aria-live="polite">
+        <span class="expression" id="expression"></span>
+        <output id="result">0</output>
+      </section>
+
+      <!-- Buttons use data attributes so app.js can attach behavior by category. -->
+      <section class="keypad" aria-label="Calculator keypad">
+        <!-- Utility buttons and division. -->
+        <button class="key function" data-action="clear">AC</button>
+        <button class="key function" data-action="sign">±</button>
+        <button class="key function" data-action="percent">%</button>
+        <button class="key operator" data-operation="div">÷</button>
+
+        <!-- Scientific functions, number row, and multiplication. -->
+        <button class="key scientific" data-scientific="sin">sin</button>
+        <button class="key number" data-number="7">7</button>
+        <button class="key number" data-number="8">8</button>
+        <button class="key number" data-number="9">9</button>
+        <button class="key operator" data-operation="mul">×</button>
+
+        <!-- Scientific functions, number row, and subtraction. -->
+        <button class="key scientific" data-scientific="cos">cos</button>
+        <button class="key number" data-number="4">4</button>
+        <button class="key number" data-number="5">5</button>
+        <button class="key number" data-number="6">6</button>
+        <button class="key operator" data-operation="sub">−</button>
+
+        <!-- Scientific functions, number row, and addition. -->
+        <button class="key scientific" data-scientific="tan">tan</button>
+        <button class="key number" data-number="1">1</button>
+        <button class="key number" data-number="2">2</button>
+        <button class="key number" data-number="3">3</button>
+        <button class="key operator" data-operation="add">+</button>
+
+        <!-- Final number row and equals button. -->
+        <button class="key scientific" data-scientific="sqrt">√x</button>
+        <button class="key scientific" data-scientific="square">x²</button>
+        <button class="key number zero" data-number="0">0</button>
+        <button class="key number" data-number=".">.</button>
+        <button class="key equals" data-action="equals">=</button>
+
+        <button class="key scientific wide" data-scientific="power">xʸ</button>
+      </section>
+    </main>
+
+    <!-- Load the operation library before the UI logic that uses it. -->
+    <script src="cal.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

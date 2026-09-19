@@ -1,0 +1,161 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  background: #f4f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 24px;
+  background: radial-gradient(
+    circle at top,
+    #000000 0,
+    #090909 45%,
+    #000000 100%
+  );
+}
+
+.calculator {
+  width: min(100%, 420px);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 34px;
+  background: rgba(22, 22, 24, 0.96);
+  box-shadow:
+    0 28px 70px rgba(40, 40, 50, 0.3),
+    inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.calculator-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 6px 16px;
+  color: #96969d;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #30d158;
+  box-shadow: 0 0 12px rgba(48, 209, 88, 0.8);
+}
+
+.display {
+  min-height: 142px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 16px 8px 22px;
+  overflow: hidden;
+}
+
+.expression {
+  min-height: 24px;
+  color: #85858d;
+  font-size: 0.95rem;
+}
+
+output {
+  width: 100%;
+  overflow: hidden;
+  color: #f5f5f7;
+  font-size: clamp(3rem, 12vw, 4.6rem);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.key {
+  min-height: 58px;
+  border: 0;
+  border-radius: 18px;
+  color: #f5f5f7;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition:
+    transform 120ms ease,
+    filter 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.key:hover {
+  filter: brightness(1.18);
+}
+
+.key:active {
+  transform: scale(0.94);
+}
+
+.number {
+  background: #343438;
+}
+
+.function {
+  background: #a5a5a8;
+  color: #171719;
+}
+
+.operator,
+.equals {
+  background: #ff9f0a;
+}
+
+.scientific {
+  background: #242428;
+  color: #b7b7be;
+  font-size: 1rem;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.wide {
+  grid-column: 1 / -1;
+  min-height: 46px;
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 10px;
+  }
+
+  .calculator {
+    padding: 14px;
+    border-radius: 27px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .key {
+    min-height: 52px;
+    border-radius: 15px;
+  }
+}
