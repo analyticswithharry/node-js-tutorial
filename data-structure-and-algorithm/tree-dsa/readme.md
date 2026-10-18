@@ -1,8 +1,4 @@
 
-# Tree DSA Master
-
-A comprehensive Data Structures and Algorithms project covering tree concepts and algorithms using JavaScript.
-
 ## Project Structure
 
 - **01-fundamentals/**
