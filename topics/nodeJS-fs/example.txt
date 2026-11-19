@@ -1,2 +1,0 @@
-Hello Harry!
-Welcome to asynchronous JavaScript.
